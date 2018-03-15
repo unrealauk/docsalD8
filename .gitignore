@@ -1,0 +1,54 @@
+# Ignore IDE folder.
+.idea_logs
+.idea
+
+# Composer files.
+.bin
+vendor
+
+# Code analysis results
+/test-results
+
+# Ignore configuration files that may contain sensitive information.
+docroot/sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+docroot/sites/*/files
+docroot/sites/*/private
+
+# Ignore contrib and core drupal.
+docroot/core
+
+# Ignore libraries.
+docroot/libraries
+
+# But keep custom modules, themes, translations and updatescripts.
+!docroot/sites/
+docroot/sites/*
+!docroot/sites/all/
+docroot/sites/all/*
+docroot/sites/all/drush/*
+!docroot/modules/
+docroot/modules/*
+!docroot/modules/custom
+!docroot/modules/features
+
+!docroot/themes/
+docroot/themes/*
+!docroot/themes/custom
+
+!drush/
+drush/*
+!drush/custom
+
+!docroot/sites/all/translations
+!docroot/sites/all/tests
+
+!docroot/sites/default/
+docroot/sites/default/*
+!docroot/sites/default/translation
+!docroot/sites/default/settings.php
+!docroot/sites/default/default.*.*
+!docroot/sites/default/config
+!docroot/sites/development.services.yml
+!docroot/sites/example.*

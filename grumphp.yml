@@ -1,0 +1,31 @@
+parameters:
+  git_dir: .
+  bin_dir: .bin
+  tasks:
+    git_commit_message: ~
+    composer: ~
+    phpparser:
+      ignore_patterns: []
+      kind: php7
+      visitors:
+        forbidden_function_calls:
+          blacklist:
+            - 'var_dump'
+            - 'dpm'
+            - 'dvm'
+      triggered_by: ['php', 'module', 'install', 'inc']
+    phpcs:
+      standard: "Drupal,DrupalPractice"
+      show_warnings: true
+      whitelist_patterns:
+        - /^docroot\/modules\/custom\/(.*)/
+      ignore_patterns:
+        - cfg/
+        - libraries/
+      triggered_by:
+        - php
+        - module
+        - install
+        - profile
+        - test
+        - in
